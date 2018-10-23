@@ -8,20 +8,28 @@
 
 /* Begin PBXBuildFile section */
 		4712334A217A852100A17503 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47123349217A852100A17503 /* AppDelegate.swift */; };
-		4712334C217A852100A17503 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4712334B217A852100A17503 /* ViewController.swift */; };
 		4712334F217A852100A17503 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4712334D217A852100A17503 /* Main.storyboard */; };
 		47123351217A852200A17503 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 47123350217A852200A17503 /* Assets.xcassets */; };
 		47123354217A852200A17503 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 47123352217A852200A17503 /* LaunchScreen.storyboard */; };
+		47123361217A88D700A17503 /* CountryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47123360217A88D700A17503 /* CountryModel.swift */; };
+		47123363217A8A4F00A17503 /* CountryController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47123362217A8A4F00A17503 /* CountryController.swift */; };
+		47123365217A8C4400A17503 /* NetworkingError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47123364217A8C4400A17503 /* NetworkingError.swift */; };
+		47123369217A920300A17503 /* CountryListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47123368217A920300A17503 /* CountryListTableViewController.swift */; };
+		47A4DDE6217A955D000378C8 /* NetworkingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47A4DDE5217A955D000378C8 /* NetworkingController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		47123346217A852100A17503 /* CountryList_iOS22.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CountryList_iOS22.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		47123349217A852100A17503 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		4712334B217A852100A17503 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		4712334E217A852100A17503 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		47123350217A852200A17503 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		47123353217A852200A17503 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		47123355217A852200A17503 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		47123360217A88D700A17503 /* CountryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryModel.swift; sourceTree = "<group>"; };
+		47123362217A8A4F00A17503 /* CountryController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryController.swift; sourceTree = "<group>"; };
+		47123364217A8C4400A17503 /* NetworkingError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingError.swift; sourceTree = "<group>"; };
+		47123368217A920300A17503 /* CountryListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryListTableViewController.swift; sourceTree = "<group>"; };
+		47A4DDE5217A955D000378C8 /* NetworkingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,14 +62,74 @@
 		47123348217A852100A17503 /* CountryList_iOS22 */ = {
 			isa = PBXGroup;
 			children = (
-				47123349217A852100A17503 /* AppDelegate.swift */,
-				4712334B217A852100A17503 /* ViewController.swift */,
-				4712334D217A852100A17503 /* Main.storyboard */,
-				47123350217A852200A17503 /* Assets.xcassets */,
-				47123352217A852200A17503 /* LaunchScreen.storyboard */,
-				47123355217A852200A17503 /* Info.plist */,
+				47A4DDE4217A954C000378C8 /* Networking */,
+				4712335F217A85C300A17503 /* Resources */,
+				4712335E217A85C000A17503 /* UI */,
+				4712335D217A85BD00A17503 /* ViewController */,
+				4712335C217A85BC00A17503 /* ModelController */,
+				4712335B217A85BA00A17503 /* Model */,
 			);
 			path = CountryList_iOS22;
+			sourceTree = "<group>";
+		};
+		4712335B217A85BA00A17503 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				47123360217A88D700A17503 /* CountryModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		4712335C217A85BC00A17503 /* ModelController */ = {
+			isa = PBXGroup;
+			children = (
+				47123362217A8A4F00A17503 /* CountryController.swift */,
+				47123364217A8C4400A17503 /* NetworkingError.swift */,
+			);
+			path = ModelController;
+			sourceTree = "<group>";
+		};
+		4712335D217A85BD00A17503 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				47123368217A920300A17503 /* CountryListTableViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		4712335E217A85C000A17503 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				47123352217A852200A17503 /* LaunchScreen.storyboard */,
+				4712334D217A852100A17503 /* Main.storyboard */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		4712335F217A85C300A17503 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				4712336A217A952700A17503 /* New Group */,
+				47123349217A852100A17503 /* AppDelegate.swift */,
+				47123350217A852200A17503 /* Assets.xcassets */,
+				47123355217A852200A17503 /* Info.plist */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		4712336A217A952700A17503 /* New Group */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "New Group";
+			sourceTree = "<group>";
+		};
+		47A4DDE4217A954C000378C8 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				47A4DDE5217A955D000378C8 /* NetworkingController.swift */,
+			);
+			path = Networking;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -135,8 +203,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4712334C217A852100A17503 /* ViewController.swift in Sources */,
+				47123363217A8A4F00A17503 /* CountryController.swift in Sources */,
+				47123361217A88D700A17503 /* CountryModel.swift in Sources */,
+				47123365217A8C4400A17503 /* NetworkingError.swift in Sources */,
+				47A4DDE6217A955D000378C8 /* NetworkingController.swift in Sources */,
 				4712334A217A852100A17503 /* AppDelegate.swift in Sources */,
+				47123369217A920300A17503 /* CountryListTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -284,7 +356,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = L7AYJDAX2C;
-				INFOPLIST_FILE = CountryList_iOS22/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/CountryList_iOS22/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -302,7 +374,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = L7AYJDAX2C;
-				INFOPLIST_FILE = CountryList_iOS22/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/CountryList_iOS22/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
